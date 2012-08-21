@@ -35,7 +35,6 @@ module Foursquare2
     # @option options String :api_version A date formatted as YYYYMMDD indicating the API version you intend to use
     # @option options Array  :connection_middleware A collection of different middleware to be applied when the connection is created
     # @option options Hash   :ssl Additional SSL options (like the path to certificate file)
-
     def initialize(options={})
       @client_id = options[:client_id]
       @client_secret = options[:client_secret]
@@ -90,7 +89,8 @@ module Foursquare2
       def default_headers
         headers = {
           :accept =>  'application/json',
-          :user_agent => 'Ruby gem'
+          :user_agent => 'Ruby gem',
+          :accept_language => 'pt'
         }
       end
 
