@@ -90,7 +90,8 @@ module Foursquare2
       def default_headers
         headers = {
           :accept =>  'application/json',
-          :user_agent => 'Ruby gem'
+          :user_agent => 'Ruby gem',
+          :lang_accept => 'pt'
         }
       end
 
